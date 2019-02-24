@@ -1,4 +1,4 @@
-; specify the configuration here 
+; укажите конфигурацию здесь 
 IniRead, everythingPath, .\config.ini, tools, everythingPath
 IniRead, virtualMachineManager, .\config.ini, tools, virtualMachineManager
 IniRead, processExplorer, .\config.ini, tools, processExplorer
