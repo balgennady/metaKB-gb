@@ -1,14 +1,15 @@
-; send 'key' with modifier keys
-; if right Alt is pressed, send 'originalKey' with modifiers
+; отправить 'key' с ключами-модификаторами
+; если нажат правый Alt, сохранить 'originalKey' с модификаторами
 
 ; so the left Alt could be used as a function key:
-; for example:
+; поэтому левый Alt можно использовать как функциональную клавишу:
+; например:
 ; *!h::keyWithCtrlAltShift("Left","h")
-; when user press left Alt, actual generate Alt and Left arrow, but
-; when user press right Alt, actual generate Alt and 'h'.
+; когда пользователь нажимает левый Alt, фактически генерирует Alt и Left arrow, но
+; когда пользователь нажимает правый Alt, фактически генерирует Alt и 'h'.
 
-; The LAlt(left Alt) key combined with the keys in this table gives you a shortcut:
-; i.e. if you want to press Alt+Up you could just press LAlt+k, no need to press Alt+CL+k together.
+; LAlt(left Alt) клавиша в сочетании с клавишами в этой таблице дает вам shortcut:
+; то есть если вы хотите нажать Alt+Up ты можешь просто нажать LAlt+k, не нужно нажимать Alt+CL+k вместе.
 keyWithCtrlAltShift(key, originalKey)
 {
     if GetKeyState("control") = 0 {
