@@ -1,30 +1,30 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-;#Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+﻿#NoEnv  ; Рекомендуется для производительности и совместимости с будущими выпусками AutoHotkey.
+;#Warn  ; Включить предупреждения, чтобы помочь с обнаружением распространенных ошибок.
+SendMode Input  ; Рекомендуется для новых скриптов из-за его превосходной скорости и надежности.
+SetWorkingDir %A_ScriptDir%  ; Обеспечивает согласованный начальный каталог.
 
 #SingleInstance force
 #MaxHotkeysPerInterval 500
 
-; Using the keyboard hook to implement the Numpad hotkeys prevents
-; them from interfering with the generation of ANSI characters such
-; as à.  This is because AutoHotkey generates such characters
-; by holding down ALT and sending a series of Numpad keystrokes.
-; Hook hotkeys are smart enough to ignore such keystrokes.
+; Использование клавиатуры для реализации горячих клавиш Numpad 
+; не позволяет им создавать символы ANSI, такие как à.
+; Это потому, что AutoHotkey генерирует такие символы, удерживая 
+; нажатой клавишу ALT и отправляя серию нажатий клавиш Numpad. 
+; Горячие клавиши Hook достаточно умны, чтобы игнорировать такие 
+; нажатия клавиш.
 #UseHook
-
 
 ;=====================================================================
 ;                   		Metasong's AHK Script
 ;---------------------------------------------------------------------
 ;Description:
-;    This Script is wrote by Metasong via AutoHotKey Script. It
-; Provides an enhancement towards the "Useless Key" CapsLock, and
-; turns CapsLock into an useful function Key just like Ctrl and Alt
-; by combining CapsLock with almost other keys in the keyboard.
+;    Этот скрипт написан Metasong через скрипт AutoHotKey. 
+; Он обеспечивает усовершенствование CapsLock «Бесполезная клавиша» 
+; и превращает CapsLock в полезную функцию Key, такую как Ctrl и Alt, 
+; комбинируя CapsLock с почти другими клавишами на клавиатуре.
 ;
 ;---------------------------------------------------------------------
-; Use it whatever and wherever you like. Hope it helps!
+; Используйте его как угодно и где угодно. Надеюсь, поможет!
 ;=====================================================================
 #include %A_LineFile%\..\config.ahk.
 #Include %A_LineFile%\..\init.ahk.
